@@ -1,8 +1,8 @@
 #This is a game of Tic-Tac-Toe!
 
 def new_game():
-    user_input = input("Do you wish to start a new game?(Y/N)(exit to terminate): ")
-    if user_input == "Y":   
+    user_input = input("Do you wish to start a new game?(y/n): ")
+    if user_input == "y":   
         print("New game coming up!")
         new_board = TicTacToe()
         new_board.print_board()
@@ -81,7 +81,7 @@ def playing(board):
     player = 'X'
     
     while (count != 9) and (board.status == 0):
-        next_move = int(input("Player {0} it is your turn! Where would you like to move?: ".format(player)))
+        next_move = int(input("Player {0} it is your turn! Where would you like to move? (1-9): ".format(player)))
         board.move(player, next_move)
         board.print_board()
         board.check(count)
